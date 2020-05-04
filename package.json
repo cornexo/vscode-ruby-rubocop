@@ -1,6 +1,6 @@
 {
     "name": "ruby-rubocop",
-    "version": "0.8.3-cornexo",
+    "version": "0.8.99-cornexo",
     "publisher": "misogi",
     "displayName": "ruby-rubocop",
     "description": "execute rubocop for current Ruby code.",
@@ -10,7 +10,7 @@
     "icon": "images/rubocop.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/misogi/vscode-ruby-rubocop.git"
+        "url": "https://github.com/cornexo/vscode-ruby-rubocop.git"
     },
     "categories": [
         "Programming Languages",
