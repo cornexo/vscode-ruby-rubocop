@@ -127,7 +127,7 @@ export class Rubocop {
             return;
         }
 
-        const fileName = document.fileName;
+        const fileName = escape(document.fileName); // to deal with parentheses in pathnames like ~/Dropbox (personal)/path/to/file.rb
         const uri = document.uri;
         let currentPath = getCurrentPath(fileName);
 
@@ -197,7 +197,7 @@ export class Rubocop {
     private executeRubocop(
         args: string[],
         fileContents: string,
-        options: cp.ExecFileOptions,
+        options: cp.ExecOptions, // pulled from https://github.com/fenec/vscode-ruby-rubocop/commit/c243fdb64369bc5aa173d9d1148390ec584fdf12
         cb: (err: Error, stdout: string, stderr: string) => void): cp.ChildProcess {
         let child;
         if (this.config.useBundler) {
